@@ -9,8 +9,8 @@ public class ConsoleProgress implements Runnable {
         List<String> list = new ArrayList<>(List.of("-", "\\", "|", "/"));
         try {
             while (!Thread.currentThread().isInterrupted()) {
-                for (int i = 0; i < 4; i++) {
-                    System.out.print("\r load: " + list.get(i));
+                for (String i : list) {
+                    System.out.print("\r load: " + i);
                     Thread.sleep(500);
                 }
             }
