@@ -6,11 +6,11 @@ import java.util.List;
 public class ConsoleProgress implements Runnable {
     @Override
     public void run() {
-        List<String> list = new ArrayList<>(List.of("-", "\\", "|", "/"));
+        char[] symbols = {'-', '\\', '|', '/'};
         try {
             while (!Thread.currentThread().isInterrupted()) {
-                for (String i : list) {
-                    System.out.print("\r load: " + i);
+                for (char symbol : symbols) {
+                    System.out.print("\r load: " + symbol);
                     Thread.sleep(500);
                 }
             }
