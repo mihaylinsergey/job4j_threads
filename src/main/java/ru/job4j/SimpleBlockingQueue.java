@@ -68,4 +68,8 @@ public class SimpleBlockingQueue<T> {
         producer.start();
         consumer.start();
     }
+
+    public synchronized boolean isEmpty() {
+        return queue.isEmpty();
+    }
 }
