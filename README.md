@@ -5,3 +5,4 @@
 4. Wait, Notify, NotifyAll
 5. Non Blocking Algorithm
 6. Пулы
+7. Ветки git.
